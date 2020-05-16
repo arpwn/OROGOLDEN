@@ -1,0 +1,553 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    <script src="~/Scripts/esm/popper.js"></script>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+</head>
+
+
+
+<body>
+
+    <script>
+
+        $('#tempAlert').on('closed.bs.alert', function () {
+            console.log('temp alert closed');
+        })
+
+        window.setTimeout(function () {
+            $("#tempAlert").fadeTo(200, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 3000);
+
+        $('.dropdown').click(function () {
+
+            $('.dropdown-menu').toggleClass('show');
+
+        });
+
+    </script>
+
+@if (TempData["msj"] != null)
+{
+    <div class="alert alert-success info alert-dismissible fade show" id='tempAlert' role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @TempData["msj"]
+    </div>
+}
+
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-success info alert-dismissible fade show" id='tempAlert' role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @TempData["error"]
+    </div>
+}
+
+
+    @*estilos*@
+
+    <style>
+
+        #input{
+            padding: 10px;
+        }
+
+        #firstP{
+            font-size: 30px;
+        }
+
+        #tituloGral{
+            display: inline-block;
+            padding: 300px;
+        }
+
+        .navbar{
+            height: 85px;
+            background-color: black;
+        }
+
+        #logo{
+            padding-left: 35px;
+        }
+
+        #email{
+            color:  #7d6608;
+            display: inline-block;
+            text-align: right;
+            font-size: 13px;
+            padding-left: 1150px;
+        }
+
+        .btn{
+            border: 2px solid black;
+            background-color: black;
+            color: black;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: #7d6608;
+            color: #7d6608;
+        }
+
+        .btn2{
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 15px 25px;
+            font-size: 16px;
+        }
+
+        .btn3{
+            background-color: #7d6608;
+            border-radius: 5px;
+            padding: 20px 80px;
+        }
+
+        .btnForm{
+            background-color: #7d6608;
+            border-radius: 5px;
+            padding: 10px 80px;
+        }
+
+        #lastButton{
+            color: white;
+            text-decoration: none;
+        }
+
+        #formPosition{
+            float: right;
+            border-radius: 5px;
+	        background-color: white;
+            margin: auto;
+        }
+
+        #form{
+            padding: 40px;
+            width: 400px;
+
+        }
+
+        #seccion1{
+            display: flex;
+            width: 100%;
+            height: 50rem;
+            background-image: url('../../img/bg-principal.jpg');
+            background-position-x: 20%;
+        }
+
+        #seccion2{
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        #imgTrat{
+            width:150px;
+            height:150px;
+            border-radius:150px;
+        }
+
+        #imgTrat:hover{
+            filter: grayscale(80%);
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+            overflow: hidden;
+        }
+
+        .tratamientos{
+            list-style-type: none;
+            display: inline-block;
+
+        }
+
+        .tratamientos li{
+            display: inline-block;
+            padding: 50px;
+        }
+
+        h4{
+            color: #7d6608;
+        }
+
+        h1{
+            color: #7d6608;
+        }
+
+        #titulo{
+            color: #7d6608;
+            font-size: 85px;
+        }
+
+        #subtitulo{
+            color: white;
+            font-size: 35px;
+        }
+
+        #textoPrincipal{
+            font-size: 22px;
+        }
+
+        #seccion3{
+            text-align: center;
+            padding-top: 60px;
+            height: 30rem;
+            width: 100%;
+            background-image: url('../../img/photo-1520473378652-85d9c4aee6cf.jpg');
+            background-size: 100%;
+            background-position-x: 30%;
+        }
+
+        #quienesSomos{
+            color: white;
+            padding-top: 50px;
+            font-size: 26px;
+        }
+
+        #encabezado{
+            color: yellow;
+        }
+        
+        #container{
+            height: 30px;
+            width: 100%;
+        }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            padding-left: 0px;
+        }
+
+        #imgCarousel{
+            height: 300px;
+            width: 100%;
+        }
+
+        iframe{
+            padding: 40px 5px 40px 80px;
+        }
+
+        #seccion4{
+            height: 40rem;
+            width: 100%;
+            display: flex;
+        }
+
+        #textoSecc4{
+            padding: 80px 80px 80px 90px;
+        }
+
+        #mapa{
+            text-decoration: none;
+        }
+
+        #mapa:hover{
+            color: #7d6608;
+        }
+
+        #seccion5{
+            text-align: center;
+            padding-top: 60px;
+            height: 30rem;
+            width: 100%;
+        }
+
+        #imgSecc5{
+            display: block;
+            margin: auto;
+            padding: 50px;
+            height: 30rem;
+            width: 70%;
+            background-image: url('../../img/photo-1553540751-988bd7918c7e.jpg');
+        }
+
+        #p1{
+            font-size: 26px;
+        }
+
+        #footer{
+            padding-top: 600px;
+            height: 30rem;
+            width: 100%;
+        }
+
+        #footerProp{
+            background-color: black;
+            display: flex;
+            height: 10rem;
+        }
+
+        #icon{
+            height: 25px;
+            width: 25px;
+        }
+
+        #social{
+            color: #7d6608;
+            padding: 20px;
+        }
+
+        #logo2{
+            padding: 20px 20px 20px 60px;
+        }
+
+        #right{
+            display: flex;
+            padding-left: 1105px;
+        }
+
+    </style>
+
+    @*navbar*@
+
+    <!-- Image and text -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="../../img/cropped-orogold-logo-dgold.png" width="170" height="45" >          
+        </a>
+        <p id="email"><strong>orogoldspa@orogold.com</strong></p>
+        <button type="button" class="btn">Reserva ahora</button>
+
+    </nav>
+
+    @*formulario*@
+
+    <div id="seccion1"> 
+
+        <div id="tituloGral">
+
+            <h1 id="titulo">OROGOLD</h1>
+            <h5 id="subtitulo">Cuando belleza y glamour <br />
+            van de la mano.</h5>
+
+        </div>
+
+        <div id="formPosition">
+
+            <div id="form">
+
+                <form action="/" method="post">
+                    <p id="firstP"><strong>Reserva ahora tu cita</strong></p>
+                    <table>
+                        
+                        <tr>
+                            <td id="input"><input type="text" name="Nombre" class="form-control-lg" placeholder="nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td id="input"><input type="text" name="Email" class="form-control-lg" placeholder="email" /></td>
+                        </tr>
+                        <tr>
+                            <td id="input"><input type="text" name="Telefono" class="form-control-lg" placeholder="telefono" /></td>
+                        </tr>
+                        <tr>
+                            <td><input class="btnForm" id="lastButton" type="submit" value="Reserva ahora" name="" formaction="/Home/Create" data-toggle="modal" data-target="#exampleModalCenter" /></td>
+                        </tr>
+
+                    </table>
+
+                </form>
+
+            </div> 
+
+        </div>
+
+       
+
+    </div>
+
+    @*seccion 2 - tratamientos*@
+
+    <div id="seccion2">
+
+        <h1>NUESTROS TRATAMIENTOS</h1>
+        <br />
+        <br />
+        <p id="textoPrincipal">El tratamiento de la casa de dos horas de duracion transporta a los clientes a un oasis de <br />
+        relajacion. Incluye un masaje de espalda, hombros, piernas y pies utilizando aceite de masaje</p>
+
+        <div>
+            <ul class="tratamientos">
+                <li>
+                    <img id="imgTrat" src="~/img/photo-1516238840914-94dfc0c873ae.jpg"/>
+                    <br />
+                    <br />
+                    <br />
+                    <h4>
+                        MASAJES CON ORO <br />
+                    </h4>
+                    <br />
+                    <br />
+                    <p>
+                        <strong>SPA OroGold</strong> ofrece tratamientos <br />
+                        especializados de la mano de nuestros <br />
+                        profesionales expertos, con productos <br />
+                        excepcionalesde marcas galardonadas <br />
+                    </p>
+                </li>
+                <li>
+                    <img id="imgTrat" src="~/img/photo-1515377905703-c4788e51af15.jpg"/>
+                    <br />
+                    <br />
+                    <h4>
+                        EXFOLIACION CON <br />
+                        PRODUCTOS NATURALES
+                    </h4>
+                    <br />
+                    <br />
+                    <p>
+                        El tratamiento de la casa de dos horas de <br />
+                        duracion transporta a los clientes a un <br />
+                        oasis de relajacion. Incluye un masaje de <br />
+                        espalda, hombors, piernas y pies <br />
+                    </p>
+                </li>
+                <li>
+                    <img id="imgTrat" src="~/img/photo-1552693673-1bf958298935.jpg"/>
+                    <br />
+                    <br />
+                    <h4>
+                        RECONSTRUCCION <br />
+                        FACIAL
+                    </h4>
+                    <br />
+                    <br />
+                    <p>
+                        El tratamiento de la casa de dos horas de <br />
+                        duracion transporta a los clientes a un <br />
+                        oasis de relajacion. Incluye un masaje de <br />
+                        espalda, hombors, piernas y pies <br />
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    @*seccion 3 - quienes somos*@
+
+    <div id="seccion3">
+
+        <h2 id="encabezado">QUIENES SOMOS</h2>
+
+        <p id="quienesSomos">
+
+            El lujoso spa en Orogold, en Mexico, ofrece un refugio sublime en pleno corazon de la ciudad. <br />
+
+            Los huespedes pueden disfrutar de un gimnasio de ultima generacion, una relajante sauna o duchas a <br />
+            chorro durante su escapada a 5 estrellas en nuestro hotel boutique en Paris. Por otra parte, nuestra <br />
+            nueva asociacion con ZEAL COSMETICS asegura la disponibilidad de una gama de relajantes <br />
+            tratamientos faciales y corporales para mimarse y revitalizarse. <br />
+
+        </p>
+
+    </div>
+    
+    <div id="container carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+        <ul>
+            <li><img id="imgCarousel" src="~/img/photo-1489659639091-8b687bc4386e.jpg" /></li>
+            <li><img id="imgCarousel" src="~/img/photo-1554057009-6798cb3d4a04.jpg" /></li>
+            <li><img id="imgCarousel" src="~/img/photo-1531853121101-cb94c8ed218d.jpg" /></li>
+            <li><img id="imgCarousel" src="~/img/photo-1560944527-a4a429848866.jpg" /></li>
+        </ul>
+
+    </div>
+
+    @*seccion 4 - mapa*@
+
+    <div id="seccion4">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.697427457981!2d-99.16456732040746!3d19.425474986952647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff6b3dbaf75b%3A0x8c21bd502927d0f7!2sAv.%20Insurgentes%20Sur%20105%2C%20Roma%20Sur%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1589580295629!5m2!1ses-419!2smx" width="1000" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+ 
+      <div id="textoSecc4">
+
+          <h4>HORARIOS</h4>
+          <p id="p1">
+              Lunes a Viernes de 10:00 a 19:30 <br />
+              Sabados, domingos y festivos de 10:00 a 18:30. <br /><br />
+              Pueden concertarse tratamientos fuera del <br />
+              horario de apertura indicado con cita previa.
+          </p>
+          <br />
+          <br />
+          <br />
+          <h4>DIRECCION</h4>
+          <p id="p1">
+              Av. Insurgentes Sur 105, Roma Sur, Cuauhtemoc, <br />
+              06600Ciudad de Mexico, CDMX, Mexico
+          </p>
+          <br />
+          <br />
+          <a id="mapa" class="btn2" href="https://www.google.com/maps/place/Av.+Insurgentes+Sur+105,+Roma+Sur,+Cuauht%C3%A9moc,+06600+Ciudad+de+M%C3%A9xico,+CDMX/19.425475,-99.1645673,17z/data=!3m1!4b1!4m8!1m2!2m1!1sAv.+Insurgentes+Sur+105,+Roma+Sur,+Cuauhtemoc,+06600+Ciudad+de+Mexico,+CDMX,+Mexico!3m4!1s0x85d1ff6b3dbaf75b:0x8c21bd502927d0f7!8m2!3d19.425475!4d-99.162384" target="_blank">
+              Ver en mapa
+          </a>
+
+
+      </div>
+
+    </div>
+
+    @*seccion 5 - reservar*@
+
+    <div id="seccion5">
+
+        <div id="imgSecc5">
+            
+        </div>
+        <div>
+            <br />
+            <br />
+            <h1>NO DEJES PASAR ESTA OPORTUNIDAD</h1>
+            <br />
+            <p id="p1">
+                Sabias que un masaje debido a su accion calmante 
+                y analgesica viene dada mediante actos reflejos 
+                que afectan el sistema <br />
+                nerviosos central o esto causa la liberacion de 
+                endorfinas que anulan las sensaciones de dolor en
+                el cerebro. El estimulo de los <br />
+                mecanos receptores mediante el masaje se ha 
+               demostrado que alivia el dolor y la tension muscular.
+            </p>
+            <br />
+            <br />
+            <a class="btn3" href=""><strong id="lastButton">Reserva ahora</strong></a>
+
+        </div>
+
+    </div>
+
+    @*footer*@
+
+    <div id="footer">
+        <div id="footerProp">
+
+            <img id="logo2" src="../../img/cropped-orogold-logo-dgold.png" width="195" height="90">
+            <div id="right">
+                <p id="social"><img id="icon" src="~/icon/mail.png" /> &nbsp; <strong>orogoldspa@orogold.com</strong></p>
+                <br />
+                <p id="social"><img id="icon" src="~/icon/telephone.png" />&nbsp; <strong>+ 52 5502630032</strong></p>
+            </div>
+        </div>  
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\BusinessGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\BusinessGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\DataGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\EntityGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\DataGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\bin\Debug\EntityGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\obj\Debug\BusinessGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\obj\Debug\BusinessGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\BusinessGolden\obj\Debug\BusinessGolden.csprojResolveAssemblyReference.cache

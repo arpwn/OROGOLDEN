@@ -1,0 +1,5 @@
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\EntityGolden\bin\Debug\EntityGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\EntityGolden\bin\Debug\EntityGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\EntityGolden\obj\Debug\EntityGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\EntityGolden\obj\Debug\EntityGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\EntityGolden\obj\Debug\EntityGolden.csprojResolveAssemblyReference.cache

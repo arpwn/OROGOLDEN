@@ -1,0 +1,5 @@
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\DataGolden\bin\Debug\DataGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\DataGolden\bin\Debug\DataGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\DataGolden\obj\Debug\DataGolden.dll
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\DataGolden\obj\Debug\DataGolden.pdb
+C:\Users\ratnik\Desktop\OROGOLD_APP\SolOroGold\DataGolden\obj\Debug\DataGolden.csprojResolveAssemblyReference.cache
